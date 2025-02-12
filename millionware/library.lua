@@ -2216,8 +2216,8 @@ library.keybind = function(self, info)
 		if info.ignore then return end
 
 		info.activekeys[info.flag] = {
-			title = `{info.names} [{info.str}] [{info.mode}]`,
-			visible = global.declare(info.active, info.active and self.enabled) and global.lower(info.mode) ~= "always", 
+			title = `[ {info.str:upper()} ] {info.names}:{info.mode:lower()}`,
+			visible = global.declare(info.active, info.active and self.enabled) and global.lower(info.mode) ~= "always",
 			key = info.flag
 		}
 	end
