@@ -1880,7 +1880,7 @@ library.toggle = function(self, info)
             VerticalAlignment = Enum.VerticalAlignment.Center,
             FillDirection = Enum.FillDirection.Horizontal,
             HorizontalAlignment = Enum.HorizontalAlignment.Right,
-            Padding = global.dim(0, 10),
+            Padding = global.dim(0, 2),
             Name = "list",
             SortOrder = Enum.SortOrder.LayoutOrder
         })
