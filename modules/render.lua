@@ -2,24 +2,18 @@
 -- pulled from twinkhook
 -- Made by jLn0n
 
-if not elitehaxx then
-    local elitehaxx = {
-        loaded = false;
-    }
+local elitehaxx = {
+    loaded = false;
+}
 
-    if not game:IsLoaded() then
-        game.Loaded:Wait()
-    end
+function elitehaxx.http_get(path)
+    local result = request({
+        Url = `https://github.com/ipufo1/twinkhook/blob/main/{path}`;
+        Method = 'GET';
+    }).Body;
 
-    function elitehaxx.http_get(path)
-        local result = request({
-            Url = `https://github.com/ipufo1/twinkhook/blob/main/{path}`;
-            Method = 'GET';
-        }).Body;
-
-        return result;
-    end;
-end
+    return result;
+end;
 
 -- services
 local coreGui = gethui();
