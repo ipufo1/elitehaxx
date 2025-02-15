@@ -2798,7 +2798,7 @@ library.colorpicker = function(self, info)
         info.old.color = input and info.old.color or info.color
         info.old.alpha = input and info.old.alpha or info.alpha
 
-        global.valset(library.flags, info.flag, info.alpha and {info.color, info.alpha} or info.color)
+        global.valset(library.flags, info.flag, info.alpha and {info.color, 1 - info.alpha} or info.color)
         global.valset(library.pointers, info.pointer, info)
 
         global.thread(info.callback)(info.color, info.alpha)
