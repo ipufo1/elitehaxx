@@ -384,6 +384,7 @@ library.loadsettings = function(config)
         if pointer.is == "keybind" then
             pointer:set("mode", element.mode)
             pointer:set("key", element.key)
+            pointer:set('active', false);
 
             continue
         end
